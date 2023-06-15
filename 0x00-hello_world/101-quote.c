@@ -1,6 +1,6 @@
 #include <unistd.h>
-#include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <errno.h>
 
 /**
@@ -12,9 +12,16 @@
  * Return: Always 1 (Error)
  */
 int main(void)
-{int s = strlen("and that piece of art is useful - Dora Korpar, 2015-10-19\n");
+{
+	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	size_t length = strlen(message);
 
-	write(2, "and that piece of art is useful" - Dora Korpar, 2015-10-19\n", s);
+	if (write(STDERR_FILENO, message, length) != (ssize_t)length)
+	{
+		perror("write");
+		exit(1);
+	}
 
 	return (1);
 }
+
