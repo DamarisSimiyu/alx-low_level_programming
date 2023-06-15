@@ -13,15 +13,10 @@
  */
 int main(void)
 {
-	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t length = strlen(message);
+int s = strlen("and that piece of art is useful" - Dora Korpar, 2015-10-19\n");
 
-	if (write(STDERR_FILENO, message, length) != (ssize_t)length)
-	{
-		perror("write");
-		exit(1);
-	}
-
+	write(2, "and that piece of art is useful" - Dora Korpar, 2015-10-19\n",
+	      s);
 	return (1);
 }
 
