@@ -12,18 +12,9 @@
  * Return: Always 1 (Error)
  */
 int main(void)
-{
-	char *error_message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t message_length = strlen(error_message);
-	ssize_t bytes_written;
+{int s = strlen("and that piece of art is useful - Dora Korpar, 2015-10-19\n");
 
-	bytes_written = write(STDERR_FILENO, error_message, message_length);
-
-	if (bytes_written != (ssize_t)message_length)
-	{
-		perror("write");
-		return (1);
-	}
+	write(2, "and that piece of art is useful - Dora Korpar, 2015-10-19\n", s);
 
 	return (1);
 }
