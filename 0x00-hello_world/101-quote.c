@@ -5,8 +5,8 @@
 /**
  * main - Entry point of the program
  *
- * Description: Prints the message "and that piece of art is useful"
- *              followed by the author and date to the standard error.
+ * Description: Prints the message
+ * followed by the author and date to the standard error.
  *
  * Return: 1
  */
